@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //creating in for loop family
+        for family in UIFont.familyNames.sorted(){
+            let name = UIFont.fontNames(forFamilyName: family)
+            //print all fonts that we have inside our Application
+           print("family: \(family). Font names: \(name)")
+            
+            
+        }
         return true
     }
 
