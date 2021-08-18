@@ -38,10 +38,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         locationManager.startUpdatingLocation()
         //inside of Info.plist need to be added 3 more features to acces our core location (we add privacy)
         
-       
+        
     }
-
-//MARK: -CLLocationManager
+    
+    //MARK: -CLLocationManager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //its gonna be our last location
         let location = locations[locations.count - 1]
@@ -60,7 +60,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             let params:[String:String] = ["lat": latitude, "lon" : longitude, "appid": weatherDataModel.apiId]
             getWeatherData(url: weatherDataModel.apiUrl, params: params)
         }
-    
+        
     }
     
     func getWeatherData(url:String, params:[String:String]){
@@ -93,10 +93,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             self.cityNameLabel.text = "Weather is unavaliable 🤨"
         }
     }
-   //presenting populated (updateWeatherData) data
+    //presenting populated (updateWeatherData) data
     func updateUI(){
         cityNameLabel.text = weatherDataModel.city
-        tempLabel.text = "\(weatherDataModel.temp)"
+        tempLabel.text = "\(weatherDataModel.temp)º"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
         
         

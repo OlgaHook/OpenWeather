@@ -18,12 +18,12 @@ class ChangeCityViewController: UIViewController {
     
     @IBOutlet weak var cityTextField: DesignableTextField!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
     @IBAction func getWeatherTapped(_ sender: Any) {
         guard let cityName = cityTextField.text  else {return}
         // textfield cant be empty, so we add
@@ -35,5 +35,5 @@ class ChangeCityViewController: UIViewController {
     }
     
     
-
+    
 }
