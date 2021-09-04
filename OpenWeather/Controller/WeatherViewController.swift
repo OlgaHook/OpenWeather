@@ -93,6 +93,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             self.cityNameLabel.text = "Weather is unavaliable 🤨"
         }
     }
+    
     //presenting populated (updateWeatherData) data
     func updateUI(){
         cityNameLabel.text = weatherDataModel.city
